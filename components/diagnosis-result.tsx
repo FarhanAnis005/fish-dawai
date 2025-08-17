@@ -13,6 +13,7 @@ interface DiagnosisResultProps {
   onReset: () => void
 }
 
+
 export function DiagnosisResult({ data, onReset }: DiagnosisResultProps) {
   return (
     <div className="space-y-6">
@@ -132,19 +133,34 @@ export function DiagnosisResult({ data, onReset }: DiagnosisResultProps) {
 
       {/* Important Notice (Global, appears once at the bottom) */}
       <Card className="border-amber-200 bg-amber-50">
-        <CardContent className="pt-6">
-          <div className="flex items-start gap-3">
-            <Info className="h-5 w-5 text-amber-600 mt-0.5" />
-            <div>
-              <h4 className="font-semibold text-amber-900 mb-1">Important Notice</h4>
-              <p className="text-sm text-amber-800">
-                This is an AI-generated recommendation. For severe cases or if symptoms persist, please consult with a
-                fish health professional or veterinarian.
-              </p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+  <CardContent className="pt-6">
+    <div className="flex items-start gap-3">
+      <Info className="h-5 w-5 text-amber-600 mt-0.5" />
+      <div>
+        <h4 className="font-semibold text-amber-900 mb-1">Important Notice</h4>
+        <p className="text-sm text-amber-800">
+          This is an AI-generated recommendation. For severe cases or if symptoms persist, please consult with a
+          fish health professional or veterinarian.
+        </p>
+        
+        {/* --- Start of new code --- */}
+        <p className="text-sm text-amber-800 mt-2">
+          For detailed expert advice, contact via WhatsApp:{' '}
+          <a
+            href="https://wa.me/917895163443"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium underline hover:text-amber-900"
+          >
+            +91 78951 63443
+          </a>
+        </p>
+        {/* --- End of new code --- */}
+
+      </div>
+    </div>
+  </CardContent>
+</Card>
     </div>
   )
 }
